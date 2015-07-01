@@ -15,6 +15,9 @@ import com.heinemann.grpc.apmplanner.UasManagerGrpc.UasManagerBlockingStub;
 
 public class UasManagerClient {
 
+	public static final String HOST = "rigi-lab-03.cs.uvic.ca";
+	public static final int PORT = 50051;
+	
 	private final ChannelImpl channel;
 	private final UasManagerBlockingStub blockingStub;
 
@@ -41,9 +44,39 @@ public class UasManagerClient {
 		return uasList;
 	}
 	
+	public void go() {
+		Null request = Null.newBuilder().build();
+		blockingStub.go(request);
+	}
+	
+	public void halt() {
+		Null request = Null.newBuilder().build();
+		blockingStub.home(request);
+	}
+	
+	public void home() {
+		Null request = Null.newBuilder().build();
+		blockingStub.home(request);
+	}
+	
+	public void land() {
+		Null request = Null.newBuilder().build();
+		blockingStub.land(request);
+	}
+	
+	public void launch() {
+		Null request = Null.newBuilder().build();
+		blockingStub.launch(request);
+	}
+	
 	public void reboot() {
 		Null request = Null.newBuilder().build();
 		blockingStub.reboot(request);
+	}
+	
+	public void shutdown() {
+		Null request = Null.newBuilder().build();
+		blockingStub.shutdown(request);
 	}
 	
 	public void setMode(int mode) {
@@ -52,7 +85,7 @@ public class UasManagerClient {
 	}
 	
 	public static void main(String[] args) {
-		UasManagerClient client = new UasManagerClient("rigi-lab-03.cs.uvic.ca", 50051);
+		UasManagerClient client = new UasManagerClient(HOST, PORT);
 		//System.out.println("identifier = " + client.getActiveUas());
 		
 		Iterator<Uas> uasIterator = client.getUasList();

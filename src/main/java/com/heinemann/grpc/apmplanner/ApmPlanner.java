@@ -2590,7 +2590,7 @@ public final class ApmPlanner {
       "ypeName\030\004 \001(\t\022\022\n\nshortState\030\005 \001(\t\022\021\n\tsho" +
       "rtMode\030\006 \001(\t\022\017\n\007isArmed\030\007 \001(\010\022\024\n\014battery" +
       "Specs\030\010 \001(\t\022\016\n\006uptime\030\t \001(\003\022\014\n\004roll\030\n \001(" +
-      "\001\022\r\n\005pitch\030\013 \001(\001\022\013\n\003yaw\030\014 \001(\0012\277\004\n\nUasMan" +
+      "\001\022\r\n\005pitch\030\013 \001(\001\022\013\n\003yaw\030\014 \001(\0012\273\010\n\nUasMan" +
       "ager\022c\n\014getActiveUas\022#.com.heinemann.grp",
       "c.apmplanner.Null\032,.com.heinemann.grpc.a" +
       "pmplanner.UasIdentifier\"\000\022c\n\014setActiveUa" +
@@ -2600,13 +2600,26 @@ public final class ApmPlanner {
       "mplanner.UasIdentifier\032\".com.heinemann.g" +
       "rpc.apmplanner.Uas\"\000\022Y\n\ngetUasList\022#.com" +
       ".heinemann.grpc.apmplanner.Null\032\".com.he" +
-      "inemann.grpc.apmplanner.Uas\"\0000\001\022T\n\006reboo" +
-      "t\022#.com.heinemann.grpc.apmplanner.Null\032#",
-      ".com.heinemann.grpc.apmplanner.Null\"\000\022X\n" +
-      "\007setMode\022&.com.heinemann.grpc.apmplanner" +
-      ".UasMode\032#.com.heinemann.grpc.apmplanner" +
-      ".Null\"\000B,\n\035com.heinemann.grpc.apmplanner" +
-      "\242\002\nAPMPlannerb\006proto3"
+      "inemann.grpc.apmplanner.Uas\"\0000\001\022P\n\002go\022#." +
+      "com.heinemann.grpc.apmplanner.Null\032#.com",
+      ".heinemann.grpc.apmplanner.Null\"\000\022R\n\004hal" +
+      "t\022#.com.heinemann.grpc.apmplanner.Null\032#" +
+      ".com.heinemann.grpc.apmplanner.Null\"\000\022R\n" +
+      "\004home\022#.com.heinemann.grpc.apmplanner.Nu" +
+      "ll\032#.com.heinemann.grpc.apmplanner.Null\"" +
+      "\000\022R\n\004land\022#.com.heinemann.grpc.apmplanne" +
+      "r.Null\032#.com.heinemann.grpc.apmplanner.N" +
+      "ull\"\000\022T\n\006launch\022#.com.heinemann.grpc.apm" +
+      "planner.Null\032#.com.heinemann.grpc.apmpla" +
+      "nner.Null\"\000\022T\n\006reboot\022#.com.heinemann.gr",
+      "pc.apmplanner.Null\032#.com.heinemann.grpc." +
+      "apmplanner.Null\"\000\022V\n\010shutdown\022#.com.hein" +
+      "emann.grpc.apmplanner.Null\032#.com.heinema" +
+      "nn.grpc.apmplanner.Null\"\000\022X\n\007setMode\022&.c" +
+      "om.heinemann.grpc.apmplanner.UasMode\032#.c" +
+      "om.heinemann.grpc.apmplanner.Null\"\000B,\n\035c" +
+      "om.heinemann.grpc.apmplanner\242\002\nAPMPlanne" +
+      "rb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
