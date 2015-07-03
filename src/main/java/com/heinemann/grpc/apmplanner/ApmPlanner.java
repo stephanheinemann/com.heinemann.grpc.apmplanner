@@ -1064,6 +1064,378 @@ public final class ApmPlanner {
 
   }
 
+  public interface UasArmedOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.heinemann.grpc.apmplanner.UasArmed)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bool armed = 1;</code>
+     */
+    boolean getArmed();
+  }
+  /**
+   * Protobuf type {@code com.heinemann.grpc.apmplanner.UasArmed}
+   */
+  public  static final class UasArmed extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.heinemann.grpc.apmplanner.UasArmed)
+      UasArmedOrBuilder {
+    // Use UasArmed.newBuilder() to construct.
+    private UasArmed(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private UasArmed() {
+      armed_ = false;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private UasArmed(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+
+              armed_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.heinemann.grpc.apmplanner.ApmPlanner.internal_static_com_heinemann_grpc_apmplanner_UasArmed_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.heinemann.grpc.apmplanner.ApmPlanner.internal_static_com_heinemann_grpc_apmplanner_UasArmed_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed.class, com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed.Builder.class);
+    }
+
+    public static final int ARMED_FIELD_NUMBER = 1;
+    private boolean armed_;
+    /**
+     * <code>optional bool armed = 1;</code>
+     */
+    public boolean getArmed() {
+      return armed_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (armed_ != false) {
+        output.writeBool(1, armed_);
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (armed_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, armed_);
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.heinemann.grpc.apmplanner.UasArmed}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.heinemann.grpc.apmplanner.UasArmed)
+        com.heinemann.grpc.apmplanner.ApmPlanner.UasArmedOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.heinemann.grpc.apmplanner.ApmPlanner.internal_static_com_heinemann_grpc_apmplanner_UasArmed_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.heinemann.grpc.apmplanner.ApmPlanner.internal_static_com_heinemann_grpc_apmplanner_UasArmed_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed.class, com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed.Builder.class);
+      }
+
+      // Construct using com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        armed_ = false;
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.heinemann.grpc.apmplanner.ApmPlanner.internal_static_com_heinemann_grpc_apmplanner_UasArmed_descriptor;
+      }
+
+      public com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed getDefaultInstanceForType() {
+        return com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed.getDefaultInstance();
+      }
+
+      public com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed build() {
+        com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed buildPartial() {
+        com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed result = new com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed(this);
+        result.armed_ = armed_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed) {
+          return mergeFrom((com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed other) {
+        if (other == com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed.getDefaultInstance()) return this;
+        if (other.getArmed() != false) {
+          setArmed(other.getArmed());
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean armed_ ;
+      /**
+       * <code>optional bool armed = 1;</code>
+       */
+      public boolean getArmed() {
+        return armed_;
+      }
+      /**
+       * <code>optional bool armed = 1;</code>
+       */
+      public Builder setArmed(boolean value) {
+        
+        armed_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool armed = 1;</code>
+       */
+      public Builder clearArmed() {
+        
+        armed_ = false;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.heinemann.grpc.apmplanner.UasArmed)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.heinemann.grpc.apmplanner.UasArmed)
+    private static final com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed();
+    }
+
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<UasArmed> PARSER =
+        new com.google.protobuf.AbstractParser<UasArmed>() {
+      public UasArmed parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new UasArmed(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UasArmed> getParserForType() {
+      return PARSER;
+    }
+
+    public com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface UasOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.heinemann.grpc.apmplanner.Uas)
       com.google.protobuf.MessageOrBuilder {
@@ -2553,6 +2925,456 @@ public final class ApmPlanner {
 
   }
 
+  public interface UasSubscriberOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.heinemann.grpc.apmplanner.UasSubscriber)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string subscriber = 1;</code>
+     */
+    java.lang.String getSubscriber();
+    /**
+     * <code>optional string subscriber = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getSubscriberBytes();
+  }
+  /**
+   * Protobuf type {@code com.heinemann.grpc.apmplanner.UasSubscriber}
+   */
+  public  static final class UasSubscriber extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:com.heinemann.grpc.apmplanner.UasSubscriber)
+      UasSubscriberOrBuilder {
+    // Use UasSubscriber.newBuilder() to construct.
+    private UasSubscriber(com.google.protobuf.GeneratedMessage.Builder builder) {
+      super(builder);
+    }
+    private UasSubscriber() {
+      subscriber_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+    }
+    private UasSubscriber(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry) {
+      this();
+      int mutable_bitField0_ = 0;
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!input.skipField(tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+
+              subscriber_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw new RuntimeException(e.setUnfinishedMessage(this));
+      } catch (java.io.IOException e) {
+        throw new RuntimeException(
+            new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this));
+      } finally {
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.heinemann.grpc.apmplanner.ApmPlanner.internal_static_com_heinemann_grpc_apmplanner_UasSubscriber_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.heinemann.grpc.apmplanner.ApmPlanner.internal_static_com_heinemann_grpc_apmplanner_UasSubscriber_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber.class, com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber.Builder.class);
+    }
+
+    public static final int SUBSCRIBER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object subscriber_;
+    /**
+     * <code>optional string subscriber = 1;</code>
+     */
+    public java.lang.String getSubscriber() {
+      java.lang.Object ref = subscriber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          subscriber_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string subscriber = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSubscriberBytes() {
+      java.lang.Object ref = subscriber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subscriber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getSubscriberBytes().isEmpty()) {
+        output.writeBytes(1, getSubscriberBytes());
+      }
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getSubscriberBytes().isEmpty()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getSubscriberBytes());
+      }
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.heinemann.grpc.apmplanner.UasSubscriber}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.heinemann.grpc.apmplanner.UasSubscriber)
+        com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriberOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.heinemann.grpc.apmplanner.ApmPlanner.internal_static_com_heinemann_grpc_apmplanner_UasSubscriber_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.heinemann.grpc.apmplanner.ApmPlanner.internal_static_com_heinemann_grpc_apmplanner_UasSubscriber_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber.class, com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber.Builder.class);
+      }
+
+      // Construct using com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        subscriber_ = "";
+
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.heinemann.grpc.apmplanner.ApmPlanner.internal_static_com_heinemann_grpc_apmplanner_UasSubscriber_descriptor;
+      }
+
+      public com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber getDefaultInstanceForType() {
+        return com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber.getDefaultInstance();
+      }
+
+      public com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber build() {
+        com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber buildPartial() {
+        com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber result = new com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber(this);
+        result.subscriber_ = subscriber_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber) {
+          return mergeFrom((com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber other) {
+        if (other == com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber.getDefaultInstance()) return this;
+        if (!other.getSubscriber().isEmpty()) {
+          subscriber_ = other.subscriber_;
+          onChanged();
+        }
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object subscriber_ = "";
+      /**
+       * <code>optional string subscriber = 1;</code>
+       */
+      public java.lang.String getSubscriber() {
+        java.lang.Object ref = subscriber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            subscriber_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string subscriber = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSubscriberBytes() {
+        java.lang.Object ref = subscriber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subscriber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string subscriber = 1;</code>
+       */
+      public Builder setSubscriber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subscriber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string subscriber = 1;</code>
+       */
+      public Builder clearSubscriber() {
+        
+        subscriber_ = getDefaultInstance().getSubscriber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string subscriber = 1;</code>
+       */
+      public Builder setSubscriberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        subscriber_ = value;
+        onChanged();
+        return this;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return this;
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.heinemann.grpc.apmplanner.UasSubscriber)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.heinemann.grpc.apmplanner.UasSubscriber)
+    private static final com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber();
+    }
+
+    public static com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    public static final com.google.protobuf.Parser<UasSubscriber> PARSER =
+        new com.google.protobuf.AbstractParser<UasSubscriber>() {
+      public UasSubscriber parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        try {
+          return new UasSubscriber(input, extensionRegistry);
+        } catch (RuntimeException e) {
+          if (e.getCause() instanceof
+              com.google.protobuf.InvalidProtocolBufferException) {
+            throw (com.google.protobuf.InvalidProtocolBufferException)
+                e.getCause();
+          }
+          throw e;
+        }
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UasSubscriber> getParserForType() {
+      return PARSER;
+    }
+
+    public com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_heinemann_grpc_apmplanner_Null_descriptor;
   private static
@@ -2569,10 +3391,20 @@ public final class ApmPlanner {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_heinemann_grpc_apmplanner_UasMode_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_heinemann_grpc_apmplanner_UasArmed_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_heinemann_grpc_apmplanner_UasArmed_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_com_heinemann_grpc_apmplanner_Uas_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_com_heinemann_grpc_apmplanner_Uas_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_heinemann_grpc_apmplanner_UasSubscriber_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_com_heinemann_grpc_apmplanner_UasSubscriber_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2585,41 +3417,52 @@ public final class ApmPlanner {
       "\n\021apm_planner.proto\022\035com.heinemann.grpc." +
       "apmplanner\"\006\n\004Null\"#\n\rUasIdentifier\022\022\n\ni" +
       "dentifier\030\001 \001(\005\"\027\n\007UasMode\022\014\n\004mode\030\001 \001(\005" +
-      "\"\342\001\n\003Uas\022\022\n\nidentifier\030\001 \001(\005\022\014\n\004name\030\002 \001" +
-      "(\t\022\026\n\016systemTypeName\030\003 \001(\t\022\031\n\021autopilotT" +
-      "ypeName\030\004 \001(\t\022\022\n\nshortState\030\005 \001(\t\022\021\n\tsho" +
-      "rtMode\030\006 \001(\t\022\017\n\007isArmed\030\007 \001(\010\022\024\n\014battery" +
-      "Specs\030\010 \001(\t\022\016\n\006uptime\030\t \001(\003\022\014\n\004roll\030\n \001(" +
-      "\001\022\r\n\005pitch\030\013 \001(\001\022\013\n\003yaw\030\014 \001(\0012\273\010\n\nUasMan" +
-      "ager\022c\n\014getActiveUas\022#.com.heinemann.grp",
-      "c.apmplanner.Null\032,.com.heinemann.grpc.a" +
-      "pmplanner.UasIdentifier\"\000\022c\n\014setActiveUa" +
-      "s\022,.com.heinemann.grpc.apmplanner.UasIde" +
-      "ntifier\032#.com.heinemann.grpc.apmplanner." +
-      "Null\"\000\022\\\n\006getUas\022,.com.heinemann.grpc.ap" +
-      "mplanner.UasIdentifier\032\".com.heinemann.g" +
-      "rpc.apmplanner.Uas\"\000\022Y\n\ngetUasList\022#.com" +
-      ".heinemann.grpc.apmplanner.Null\032\".com.he" +
-      "inemann.grpc.apmplanner.Uas\"\0000\001\022P\n\002go\022#." +
-      "com.heinemann.grpc.apmplanner.Null\032#.com",
-      ".heinemann.grpc.apmplanner.Null\"\000\022R\n\004hal" +
-      "t\022#.com.heinemann.grpc.apmplanner.Null\032#" +
-      ".com.heinemann.grpc.apmplanner.Null\"\000\022R\n" +
-      "\004home\022#.com.heinemann.grpc.apmplanner.Nu" +
-      "ll\032#.com.heinemann.grpc.apmplanner.Null\"" +
-      "\000\022R\n\004land\022#.com.heinemann.grpc.apmplanne" +
-      "r.Null\032#.com.heinemann.grpc.apmplanner.N" +
-      "ull\"\000\022T\n\006launch\022#.com.heinemann.grpc.apm" +
-      "planner.Null\032#.com.heinemann.grpc.apmpla" +
-      "nner.Null\"\000\022T\n\006reboot\022#.com.heinemann.gr",
+      "\"\031\n\010UasArmed\022\r\n\005armed\030\001 \001(\010\"\342\001\n\003Uas\022\022\n\ni" +
+      "dentifier\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\026\n\016systemT" +
+      "ypeName\030\003 \001(\t\022\031\n\021autopilotTypeName\030\004 \001(\t" +
+      "\022\022\n\nshortState\030\005 \001(\t\022\021\n\tshortMode\030\006 \001(\t\022" +
+      "\017\n\007isArmed\030\007 \001(\010\022\024\n\014batterySpecs\030\010 \001(\t\022\016" +
+      "\n\006uptime\030\t \001(\003\022\014\n\004roll\030\n \001(\001\022\r\n\005pitch\030\013 " +
+      "\001(\001\022\013\n\003yaw\030\014 \001(\001\"#\n\rUasSubscriber\022\022\n\nsub",
+      "scriber\030\001 \001(\t2\317\013\n\nUasManager\022c\n\014getActiv" +
+      "eUas\022#.com.heinemann.grpc.apmplanner.Nul" +
+      "l\032,.com.heinemann.grpc.apmplanner.UasIde" +
+      "ntifier\"\000\022c\n\014setActiveUas\022,.com.heineman" +
+      "n.grpc.apmplanner.UasIdentifier\032#.com.he" +
+      "inemann.grpc.apmplanner.Null\"\000\022\\\n\006getUas" +
+      "\022,.com.heinemann.grpc.apmplanner.UasIden" +
+      "tifier\032\".com.heinemann.grpc.apmplanner.U" +
+      "as\"\000\022Y\n\ngetUasList\022#.com.heinemann.grpc." +
+      "apmplanner.Null\032\".com.heinemann.grpc.apm",
+      "planner.Uas\"\0000\001\022P\n\002go\022#.com.heinemann.gr" +
       "pc.apmplanner.Null\032#.com.heinemann.grpc." +
-      "apmplanner.Null\"\000\022V\n\010shutdown\022#.com.hein" +
+      "apmplanner.Null\"\000\022R\n\004halt\022#.com.heineman" +
+      "n.grpc.apmplanner.Null\032#.com.heinemann.g" +
+      "rpc.apmplanner.Null\"\000\022R\n\004home\022#.com.hein" +
       "emann.grpc.apmplanner.Null\032#.com.heinema" +
-      "nn.grpc.apmplanner.Null\"\000\022X\n\007setMode\022&.c" +
-      "om.heinemann.grpc.apmplanner.UasMode\032#.c" +
-      "om.heinemann.grpc.apmplanner.Null\"\000B,\n\035c" +
-      "om.heinemann.grpc.apmplanner\242\002\nAPMPlanne" +
-      "rb\006proto3"
+      "nn.grpc.apmplanner.Null\"\000\022R\n\004land\022#.com." +
+      "heinemann.grpc.apmplanner.Null\032#.com.hei" +
+      "nemann.grpc.apmplanner.Null\"\000\022T\n\006launch\022" +
+      "#.com.heinemann.grpc.apmplanner.Null\032#.c",
+      "om.heinemann.grpc.apmplanner.Null\"\000\022T\n\006r" +
+      "eboot\022#.com.heinemann.grpc.apmplanner.Nu" +
+      "ll\032#.com.heinemann.grpc.apmplanner.Null\"" +
+      "\000\022V\n\010shutdown\022#.com.heinemann.grpc.apmpl" +
+      "anner.Null\032#.com.heinemann.grpc.apmplann" +
+      "er.Null\"\000\022X\n\007setMode\022&.com.heinemann.grp" +
+      "c.apmplanner.UasMode\032#.com.heinemann.grp" +
+      "c.apmplanner.Null\"\000\022Z\n\010setArmed\022\'.com.he" +
+      "inemann.grpc.apmplanner.UasArmed\032#.com.h" +
+      "einemann.grpc.apmplanner.Null\"\000\022g\n\016getSu",
+      "bscribers\022#.com.heinemann.grpc.apmplanne" +
+      "r.Null\032,.com.heinemann.grpc.apmplanner.U" +
+      "asSubscriber\"\0000\001\022d\n\raddSubscriber\022,.com." +
+      "heinemann.grpc.apmplanner.UasSubscriber\032" +
+      "#.com.heinemann.grpc.apmplanner.Null\"\000\022g" +
+      "\n\020removeSubscriber\022,.com.heinemann.grpc." +
+      "apmplanner.UasSubscriber\032#.com.heinemann" +
+      ".grpc.apmplanner.Null\"\000B,\n\035com.heinemann" +
+      ".grpc.apmplanner\242\002\nAPMPlannerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2651,12 +3494,24 @@ public final class ApmPlanner {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_heinemann_grpc_apmplanner_UasMode_descriptor,
         new java.lang.String[] { "Mode", });
-    internal_static_com_heinemann_grpc_apmplanner_Uas_descriptor =
+    internal_static_com_heinemann_grpc_apmplanner_UasArmed_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_com_heinemann_grpc_apmplanner_UasArmed_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_heinemann_grpc_apmplanner_UasArmed_descriptor,
+        new java.lang.String[] { "Armed", });
+    internal_static_com_heinemann_grpc_apmplanner_Uas_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_com_heinemann_grpc_apmplanner_Uas_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_com_heinemann_grpc_apmplanner_Uas_descriptor,
         new java.lang.String[] { "Identifier", "Name", "SystemTypeName", "AutopilotTypeName", "ShortState", "ShortMode", "IsArmed", "BatterySpecs", "Uptime", "Roll", "Pitch", "Yaw", });
+    internal_static_com_heinemann_grpc_apmplanner_UasSubscriber_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_com_heinemann_grpc_apmplanner_UasSubscriber_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_com_heinemann_grpc_apmplanner_UasSubscriber_descriptor,
+        new java.lang.String[] { "Subscriber", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

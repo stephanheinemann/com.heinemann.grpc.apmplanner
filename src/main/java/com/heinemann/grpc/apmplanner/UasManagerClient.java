@@ -1,6 +1,8 @@
 package com.heinemann.grpc.apmplanner;
 
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Iterator;
 
 import io.grpc.ChannelImpl;
@@ -9,8 +11,10 @@ import io.grpc.transport.netty.NettyChannelBuilder;
 
 import com.heinemann.grpc.apmplanner.ApmPlanner.Null;
 import com.heinemann.grpc.apmplanner.ApmPlanner.Uas;
+import com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed;
 import com.heinemann.grpc.apmplanner.ApmPlanner.UasIdentifier;
 import com.heinemann.grpc.apmplanner.ApmPlanner.UasMode;
+import com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber;
 import com.heinemann.grpc.apmplanner.UasManagerGrpc.UasManagerBlockingStub;
 
 public class UasManagerClient {
@@ -82,6 +86,27 @@ public class UasManagerClient {
 	public void setMode(int mode) {
 		UasMode uasMode = UasMode.newBuilder().setMode(mode).build();
 		blockingStub.setMode(uasMode);
+	}
+	
+	public void setArmed(boolean armed) {
+		UasArmed uasArmed = UasArmed.newBuilder().setArmed(armed).build();
+		blockingStub.setArmed(uasArmed);
+	}
+	
+	public Iterator<UasSubscriber> getSubscribers() {
+		Null request = Null.newBuilder().build();
+		Iterator<UasSubscriber> subscribers = blockingStub.getSubscribers(request);
+		return subscribers;
+	}
+	
+	public void addSubscriber(String subscriber) throws IOException {
+		UasSubscriber uasSubscriber = UasSubscriber.newBuilder().setSubscriber(subscriber).build();
+		blockingStub.addSubscriber(uasSubscriber);
+	}
+	
+	public void removeSubscriber(String subscriber) {
+		UasSubscriber uasSubscriber = UasSubscriber.newBuilder().setSubscriber(subscriber).build();
+		blockingStub.removeSubscriber(uasSubscriber);
 	}
 	
 	public static void main(String[] args) {

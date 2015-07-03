@@ -87,6 +87,30 @@ public class UasManagerGrpc {
           io.grpc.MethodType.UNARY, "setMode",
           io.grpc.protobuf.ProtoUtils.marshaller(com.heinemann.grpc.apmplanner.ApmPlanner.UasMode.PARSER),
           io.grpc.protobuf.ProtoUtils.marshaller(com.heinemann.grpc.apmplanner.ApmPlanner.Null.PARSER));
+  private static final io.grpc.stub.Method<com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed,
+      com.heinemann.grpc.apmplanner.ApmPlanner.Null> METHOD_SET_ARMED =
+      io.grpc.stub.Method.create(
+          io.grpc.MethodType.UNARY, "setArmed",
+          io.grpc.protobuf.ProtoUtils.marshaller(com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed.PARSER),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.heinemann.grpc.apmplanner.ApmPlanner.Null.PARSER));
+  private static final io.grpc.stub.Method<com.heinemann.grpc.apmplanner.ApmPlanner.Null,
+      com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber> METHOD_GET_SUBSCRIBERS =
+      io.grpc.stub.Method.create(
+          io.grpc.MethodType.SERVER_STREAMING, "getSubscribers",
+          io.grpc.protobuf.ProtoUtils.marshaller(com.heinemann.grpc.apmplanner.ApmPlanner.Null.PARSER),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber.PARSER));
+  private static final io.grpc.stub.Method<com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber,
+      com.heinemann.grpc.apmplanner.ApmPlanner.Null> METHOD_ADD_SUBSCRIBER =
+      io.grpc.stub.Method.create(
+          io.grpc.MethodType.UNARY, "addSubscriber",
+          io.grpc.protobuf.ProtoUtils.marshaller(com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber.PARSER),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.heinemann.grpc.apmplanner.ApmPlanner.Null.PARSER));
+  private static final io.grpc.stub.Method<com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber,
+      com.heinemann.grpc.apmplanner.ApmPlanner.Null> METHOD_REMOVE_SUBSCRIBER =
+      io.grpc.stub.Method.create(
+          io.grpc.MethodType.UNARY, "removeSubscriber",
+          io.grpc.protobuf.ProtoUtils.marshaller(com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber.PARSER),
+          io.grpc.protobuf.ProtoUtils.marshaller(com.heinemann.grpc.apmplanner.ApmPlanner.Null.PARSER));
 
   public static UasManagerStub newStub(io.grpc.Channel channel) {
     return new UasManagerStub(channel, CONFIG);
@@ -132,6 +156,14 @@ public class UasManagerGrpc {
         com.heinemann.grpc.apmplanner.ApmPlanner.Null> shutdown;
     public final io.grpc.MethodDescriptor<com.heinemann.grpc.apmplanner.ApmPlanner.UasMode,
         com.heinemann.grpc.apmplanner.ApmPlanner.Null> setMode;
+    public final io.grpc.MethodDescriptor<com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed,
+        com.heinemann.grpc.apmplanner.ApmPlanner.Null> setArmed;
+    public final io.grpc.MethodDescriptor<com.heinemann.grpc.apmplanner.ApmPlanner.Null,
+        com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber> getSubscribers;
+    public final io.grpc.MethodDescriptor<com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber,
+        com.heinemann.grpc.apmplanner.ApmPlanner.Null> addSubscriber;
+    public final io.grpc.MethodDescriptor<com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber,
+        com.heinemann.grpc.apmplanner.ApmPlanner.Null> removeSubscriber;
 
     private UasManagerServiceDescriptor() {
       getActiveUas = createMethodDescriptor(
@@ -158,6 +190,14 @@ public class UasManagerGrpc {
           "com.heinemann.grpc.apmplanner.UasManager", METHOD_SHUTDOWN);
       setMode = createMethodDescriptor(
           "com.heinemann.grpc.apmplanner.UasManager", METHOD_SET_MODE);
+      setArmed = createMethodDescriptor(
+          "com.heinemann.grpc.apmplanner.UasManager", METHOD_SET_ARMED);
+      getSubscribers = createMethodDescriptor(
+          "com.heinemann.grpc.apmplanner.UasManager", METHOD_GET_SUBSCRIBERS);
+      addSubscriber = createMethodDescriptor(
+          "com.heinemann.grpc.apmplanner.UasManager", METHOD_ADD_SUBSCRIBER);
+      removeSubscriber = createMethodDescriptor(
+          "com.heinemann.grpc.apmplanner.UasManager", METHOD_REMOVE_SUBSCRIBER);
     }
 
     @SuppressWarnings("unchecked")
@@ -199,6 +239,18 @@ public class UasManagerGrpc {
       setMode = (io.grpc.MethodDescriptor<com.heinemann.grpc.apmplanner.ApmPlanner.UasMode,
           com.heinemann.grpc.apmplanner.ApmPlanner.Null>) methodMap.get(
           CONFIG.setMode.getName());
+      setArmed = (io.grpc.MethodDescriptor<com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed,
+          com.heinemann.grpc.apmplanner.ApmPlanner.Null>) methodMap.get(
+          CONFIG.setArmed.getName());
+      getSubscribers = (io.grpc.MethodDescriptor<com.heinemann.grpc.apmplanner.ApmPlanner.Null,
+          com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber>) methodMap.get(
+          CONFIG.getSubscribers.getName());
+      addSubscriber = (io.grpc.MethodDescriptor<com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber,
+          com.heinemann.grpc.apmplanner.ApmPlanner.Null>) methodMap.get(
+          CONFIG.addSubscriber.getName());
+      removeSubscriber = (io.grpc.MethodDescriptor<com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber,
+          com.heinemann.grpc.apmplanner.ApmPlanner.Null>) methodMap.get(
+          CONFIG.removeSubscriber.getName());
     }
 
     @java.lang.Override
@@ -221,7 +273,11 @@ public class UasManagerGrpc {
           launch,
           reboot,
           shutdown,
-          setMode);
+          setMode,
+          setArmed,
+          getSubscribers,
+          addSubscriber,
+          removeSubscriber);
     }
   }
 
@@ -262,6 +318,18 @@ public class UasManagerGrpc {
 
     public void setMode(com.heinemann.grpc.apmplanner.ApmPlanner.UasMode request,
         io.grpc.stub.StreamObserver<com.heinemann.grpc.apmplanner.ApmPlanner.Null> responseObserver);
+
+    public void setArmed(com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed request,
+        io.grpc.stub.StreamObserver<com.heinemann.grpc.apmplanner.ApmPlanner.Null> responseObserver);
+
+    public void getSubscribers(com.heinemann.grpc.apmplanner.ApmPlanner.Null request,
+        io.grpc.stub.StreamObserver<com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber> responseObserver);
+
+    public void addSubscriber(com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber request,
+        io.grpc.stub.StreamObserver<com.heinemann.grpc.apmplanner.ApmPlanner.Null> responseObserver);
+
+    public void removeSubscriber(com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber request,
+        io.grpc.stub.StreamObserver<com.heinemann.grpc.apmplanner.ApmPlanner.Null> responseObserver);
   }
 
   public static interface UasManagerBlockingClient {
@@ -290,6 +358,15 @@ public class UasManagerGrpc {
     public com.heinemann.grpc.apmplanner.ApmPlanner.Null shutdown(com.heinemann.grpc.apmplanner.ApmPlanner.Null request);
 
     public com.heinemann.grpc.apmplanner.ApmPlanner.Null setMode(com.heinemann.grpc.apmplanner.ApmPlanner.UasMode request);
+
+    public com.heinemann.grpc.apmplanner.ApmPlanner.Null setArmed(com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed request);
+
+    public java.util.Iterator<com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber> getSubscribers(
+        com.heinemann.grpc.apmplanner.ApmPlanner.Null request);
+
+    public com.heinemann.grpc.apmplanner.ApmPlanner.Null addSubscriber(com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber request);
+
+    public com.heinemann.grpc.apmplanner.ApmPlanner.Null removeSubscriber(com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber request);
   }
 
   public static interface UasManagerFutureClient {
@@ -326,6 +403,15 @@ public class UasManagerGrpc {
 
     public com.google.common.util.concurrent.ListenableFuture<com.heinemann.grpc.apmplanner.ApmPlanner.Null> setMode(
         com.heinemann.grpc.apmplanner.ApmPlanner.UasMode request);
+
+    public com.google.common.util.concurrent.ListenableFuture<com.heinemann.grpc.apmplanner.ApmPlanner.Null> setArmed(
+        com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed request);
+
+    public com.google.common.util.concurrent.ListenableFuture<com.heinemann.grpc.apmplanner.ApmPlanner.Null> addSubscriber(
+        com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber request);
+
+    public com.google.common.util.concurrent.ListenableFuture<com.heinemann.grpc.apmplanner.ApmPlanner.Null> removeSubscriber(
+        com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber request);
   }
 
   public static class UasManagerStub extends
@@ -425,6 +511,34 @@ public class UasManagerGrpc {
       asyncUnaryCall(
           channel.newCall(config.setMode), request, responseObserver);
     }
+
+    @java.lang.Override
+    public void setArmed(com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed request,
+        io.grpc.stub.StreamObserver<com.heinemann.grpc.apmplanner.ApmPlanner.Null> responseObserver) {
+      asyncUnaryCall(
+          channel.newCall(config.setArmed), request, responseObserver);
+    }
+
+    @java.lang.Override
+    public void getSubscribers(com.heinemann.grpc.apmplanner.ApmPlanner.Null request,
+        io.grpc.stub.StreamObserver<com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber> responseObserver) {
+      asyncServerStreamingCall(
+          channel.newCall(config.getSubscribers), request, responseObserver);
+    }
+
+    @java.lang.Override
+    public void addSubscriber(com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber request,
+        io.grpc.stub.StreamObserver<com.heinemann.grpc.apmplanner.ApmPlanner.Null> responseObserver) {
+      asyncUnaryCall(
+          channel.newCall(config.addSubscriber), request, responseObserver);
+    }
+
+    @java.lang.Override
+    public void removeSubscriber(com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber request,
+        io.grpc.stub.StreamObserver<com.heinemann.grpc.apmplanner.ApmPlanner.Null> responseObserver) {
+      asyncUnaryCall(
+          channel.newCall(config.removeSubscriber), request, responseObserver);
+    }
   }
 
   public static class UasManagerBlockingStub extends
@@ -512,6 +626,31 @@ public class UasManagerGrpc {
     public com.heinemann.grpc.apmplanner.ApmPlanner.Null setMode(com.heinemann.grpc.apmplanner.ApmPlanner.UasMode request) {
       return blockingUnaryCall(
           channel.newCall(config.setMode), request);
+    }
+
+    @java.lang.Override
+    public com.heinemann.grpc.apmplanner.ApmPlanner.Null setArmed(com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed request) {
+      return blockingUnaryCall(
+          channel.newCall(config.setArmed), request);
+    }
+
+    @java.lang.Override
+    public java.util.Iterator<com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber> getSubscribers(
+        com.heinemann.grpc.apmplanner.ApmPlanner.Null request) {
+      return blockingServerStreamingCall(
+          channel.newCall(config.getSubscribers), request);
+    }
+
+    @java.lang.Override
+    public com.heinemann.grpc.apmplanner.ApmPlanner.Null addSubscriber(com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber request) {
+      return blockingUnaryCall(
+          channel.newCall(config.addSubscriber), request);
+    }
+
+    @java.lang.Override
+    public com.heinemann.grpc.apmplanner.ApmPlanner.Null removeSubscriber(com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber request) {
+      return blockingUnaryCall(
+          channel.newCall(config.removeSubscriber), request);
     }
   }
 
@@ -604,6 +743,27 @@ public class UasManagerGrpc {
         com.heinemann.grpc.apmplanner.ApmPlanner.UasMode request) {
       return unaryFutureCall(
           channel.newCall(config.setMode), request);
+    }
+
+    @java.lang.Override
+    public com.google.common.util.concurrent.ListenableFuture<com.heinemann.grpc.apmplanner.ApmPlanner.Null> setArmed(
+        com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed request) {
+      return unaryFutureCall(
+          channel.newCall(config.setArmed), request);
+    }
+
+    @java.lang.Override
+    public com.google.common.util.concurrent.ListenableFuture<com.heinemann.grpc.apmplanner.ApmPlanner.Null> addSubscriber(
+        com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber request) {
+      return unaryFutureCall(
+          channel.newCall(config.addSubscriber), request);
+    }
+
+    @java.lang.Override
+    public com.google.common.util.concurrent.ListenableFuture<com.heinemann.grpc.apmplanner.ApmPlanner.Null> removeSubscriber(
+        com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber request) {
+      return unaryFutureCall(
+          channel.newCall(config.removeSubscriber), request);
     }
   }
 
@@ -764,6 +924,58 @@ public class UasManagerGrpc {
                   com.heinemann.grpc.apmplanner.ApmPlanner.UasMode request,
                   io.grpc.stub.StreamObserver<com.heinemann.grpc.apmplanner.ApmPlanner.Null> responseObserver) {
                 serviceImpl.setMode(request, responseObserver);
+              }
+            })))
+      .addMethod(createMethodDefinition(
+          METHOD_SET_ARMED,
+          asyncUnaryRequestCall(
+            new io.grpc.stub.ServerCalls.UnaryRequestMethod<
+                com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed,
+                com.heinemann.grpc.apmplanner.ApmPlanner.Null>() {
+              @java.lang.Override
+              public void invoke(
+                  com.heinemann.grpc.apmplanner.ApmPlanner.UasArmed request,
+                  io.grpc.stub.StreamObserver<com.heinemann.grpc.apmplanner.ApmPlanner.Null> responseObserver) {
+                serviceImpl.setArmed(request, responseObserver);
+              }
+            })))
+      .addMethod(createMethodDefinition(
+          METHOD_GET_SUBSCRIBERS,
+          asyncUnaryRequestCall(
+            new io.grpc.stub.ServerCalls.UnaryRequestMethod<
+                com.heinemann.grpc.apmplanner.ApmPlanner.Null,
+                com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber>() {
+              @java.lang.Override
+              public void invoke(
+                  com.heinemann.grpc.apmplanner.ApmPlanner.Null request,
+                  io.grpc.stub.StreamObserver<com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber> responseObserver) {
+                serviceImpl.getSubscribers(request, responseObserver);
+              }
+            })))
+      .addMethod(createMethodDefinition(
+          METHOD_ADD_SUBSCRIBER,
+          asyncUnaryRequestCall(
+            new io.grpc.stub.ServerCalls.UnaryRequestMethod<
+                com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber,
+                com.heinemann.grpc.apmplanner.ApmPlanner.Null>() {
+              @java.lang.Override
+              public void invoke(
+                  com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber request,
+                  io.grpc.stub.StreamObserver<com.heinemann.grpc.apmplanner.ApmPlanner.Null> responseObserver) {
+                serviceImpl.addSubscriber(request, responseObserver);
+              }
+            })))
+      .addMethod(createMethodDefinition(
+          METHOD_REMOVE_SUBSCRIBER,
+          asyncUnaryRequestCall(
+            new io.grpc.stub.ServerCalls.UnaryRequestMethod<
+                com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber,
+                com.heinemann.grpc.apmplanner.ApmPlanner.Null>() {
+              @java.lang.Override
+              public void invoke(
+                  com.heinemann.grpc.apmplanner.ApmPlanner.UasSubscriber request,
+                  io.grpc.stub.StreamObserver<com.heinemann.grpc.apmplanner.ApmPlanner.Null> responseObserver) {
+                serviceImpl.removeSubscriber(request, responseObserver);
               }
             }))).build();
   }
