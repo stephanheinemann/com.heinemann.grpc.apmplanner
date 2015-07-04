@@ -99,7 +99,7 @@ public class UasManagerClient {
 		return subscribers;
 	}
 	
-	public void addSubscriber(String subscriber) throws IOException {
+	public void addSubscriber(String subscriber) {
 		UasSubscriber uasSubscriber = UasSubscriber.newBuilder().setSubscriber(subscriber).build();
 		blockingStub.addSubscriber(uasSubscriber);
 	}
