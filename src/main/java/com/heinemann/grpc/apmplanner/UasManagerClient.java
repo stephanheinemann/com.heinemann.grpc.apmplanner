@@ -1,8 +1,6 @@
 package com.heinemann.grpc.apmplanner;
 
 
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Iterator;
 
 import io.grpc.ChannelImpl;
@@ -126,6 +124,6 @@ public class UasManagerClient {
 		System.out.println(uas.getBatterySpecs());
 		*/
 		
-		client.reboot();
+		//client.reboot();
 	}
 }
