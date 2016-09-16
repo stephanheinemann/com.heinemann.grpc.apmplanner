@@ -3,9 +3,9 @@ package com.heinemann.grpc.apmplanner;
 
 import java.util.Iterator;
 
-import io.grpc.ChannelImpl;
-import io.grpc.transport.netty.NegotiationType;
-import io.grpc.transport.netty.NettyChannelBuilder;
+import io.grpc.Channel;
+import io.grpc.netty.NegotiationType;
+import io.grpc.netty.NettyChannelBuilder;
 
 import com.heinemann.grpc.apmplanner.ApmPlanner.Null;
 import com.heinemann.grpc.apmplanner.ApmPlanner.Uas;
@@ -20,7 +20,7 @@ public class UasManagerClient {
 	public static final String HOST = "rigi-lab-03.cs.uvic.ca";
 	public static final int PORT = 50051;
 	
-	private final ChannelImpl channel;
+	private final Channel channel;
 	private final UasManagerBlockingStub blockingStub;
 
 	public UasManagerClient(String host, int port) {
